@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="box">
+    456
+    <!--这是一个节点-->
+</div>
+</body>
+<script>
+let box=document.querySelector(".box");
+console.dir(box.firstChild);//box的第一个子节点
+console.dir(box.lastChild);
+console.dir(box.childNodes);//box的孩子节点
+console.dir(box.firstElementChild);//box的第一个子元素节点
+console.log(box.nextSibling);//box的下一个兄弟节点
+console.log(box.nextElementSibling);//下一个兄弟元素节点
+console.log(box.attributes);//box的属性节点
+console.log(box.parentNode);//box的父节点
+</script>
+</html>

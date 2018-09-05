@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background: aliceblue;
+        border: 1px solid red;
+    }
+</style>
+<body>
+<span>点击</span>
+<div class="box"></div>
+</body>
+<script>
+    let box=document.querySelector(".box");
+    let span=document.querySelector("span");
+    let num=0;
+    span.onclick=function () {
+        let a=document.createElement("a");
+        let text=document.createTextNode("点击");
+
+        let attr=document.createAttribute("href");//创建属性
+
+        attr.nodeValue="www.baidu.com";//给属性赋值
+        a.setAttributeNode(attr);//把属性添加给a标签
+
+        num++;
+
+        a.appendChild(text);
+        box.appendChild(a);
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        width: 400px;
+        height: 400px;
+        background: aliceblue;
+        border: 1px solid #210058;
+    }
+</style>
+<body>
+<span>点击</span>
+<div class="box">
+
+
+</div>
+</body>
+<script>
+    let box=document.querySelector(".box");
+    let span=document.querySelector("span")
+    console.log(box,span);
+    span.onclick=function () {
+        let w=parseInt(Math.random()*100+100);
+        let r=parseInt(Math.random()*255);
+        let g=parseInt(Math.random()*255);
+        let b=parseInt(Math.random()*255);
+        let son=document.createElement("div");
+        son.style=`width:${w}px;height:${w}px;border-radius:50%;float:left;background:rgb(${r},${g},${b})`;
+        box.appendChild(son);
+    }
+</script>
+</html>

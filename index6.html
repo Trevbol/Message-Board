@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        width: 600px;
+        height: 600px;
+        background: aquamarine;
+        border: 1px solid #210058;
+        margin: 0 auto;
+        position: relative;
+    }
+    .top{
+        width: 500px;
+        background: gray;
+        height: 200px;
+        margin: 10px auto 0;
+    }
+    .bottom{
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+<body>
+<section>
+    <div class="box">
+        <div class="top"></div>
+        <div class="bottom">
+            <button>点击</button>
+            <textarea></textarea>
+        </div>
+    </div>
+</section>
+</body>
+<script>
+    let tops=document.querySelector(".top");
+    let button=document.querySelector("button");
+    let text=document.querySelector("textarea");
+    button.onclick=function () {
+        let div=document.createElement("div");
+        div.style=`background:red;width:500px;
+        height:40px`;
+
+        tops.appendChild(div);
+        let texts=text.value;
+        div.innerText=texts;
+        text.value="";
+        text.focus();
+
+    }
+
+</script>
+</html>

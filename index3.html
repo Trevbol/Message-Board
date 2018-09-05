@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background: azure;
+        border: 1px solid #210058;
+    }
+</style>
+<body>
+<span></span>
+<div class="box"></div>
+</body>
+<script>
+    let box=document.querySelector(".box");
+    let str="关关雎鸠，在河之洲。窈窕淑女，君子好逑。参差荇菜，左右流之。窈窕淑女，寤寐求之。求之不得，寤寐思服。悠哉悠哉，辗转反侧。参差荇菜，左右采之。窈窕淑女，琴瑟友之。参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。";
+    let start=0;
+    let t=setInterval(fn,200);
+    function fn() {
+        if(start>=str.length){
+            clearInterval(t);
+        }
+        let con=str.substr(start,1);
+        let text=document.createTextNode(con);
+        // con.appendChild(text)
+        start+=1;
+        box.appendChild(text);
+
+    }
+</script>
+</html>
